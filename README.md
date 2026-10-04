@@ -209,6 +209,20 @@ Output:
 target/remotecontainers-1.0.1.jar
 ```
 
+## Support and Bug Reports
+
+If you find a bug or have a suggestion, please open an issue on the GitHub repository.
+
+When reporting a bug, please include:
+
+- Minecraft version
+- Server software and version (CraftBukkit, Spigot, or Paper)
+- RemoteContainers version
+- Steps to reproduce the problem
+- Relevant console errors or stack traces
+
+Please check existing issues before creating a new one.
+
 ## License
 
 RemoteContainers is licensed under the **MIT License**.
