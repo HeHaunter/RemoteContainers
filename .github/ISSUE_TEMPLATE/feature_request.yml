@@ -1,0 +1,88 @@
+name: Feature request
+description: Suggest an improvement or new feature for RemoteContainers
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement to RemoteContainers.
+
+        Please describe the use case, not just the feature itself. That makes it easier to decide how it should work.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Explain the use case or limitation you are running into.
+      placeholder: "I would like server owners to be able to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you would like the feature to work.
+      placeholder: "Add a config option that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Is there another way to solve the same problem?
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example commands or configuration
+      description: If useful, show what the command/config could look like.
+      render: yaml
+    validations:
+      required: false
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft version
+      description: Optional. Include this if the suggestion depends on a specific Minecraft version.
+      placeholder: "26.2"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: server-software
+    attributes:
+      label: Server software
+      description: Optional. Include this if the suggestion is platform-specific.
+      options:
+        - Not platform-specific
+        - CraftBukkit
+        - Spigot
+        - Paper
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional information
+      description: Add screenshots, links, mockups, or other context if helpful.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and did not find the same suggestion.
+          required: true
+        - label: This request is related to RemoteContainers rather than another plugin.
+          required: true

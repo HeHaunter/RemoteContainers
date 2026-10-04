@@ -1,0 +1,44 @@
+name: RemoteContainers
+version: 1.0.1
+main: dev.hehaunter.remotecontainers.RemoteContainersPlugin
+api-version: '1.21'
+author: HeHaunter
+description: Register real containers and open them remotely.
+
+commands:
+  remotecontainers:
+    description: Manage remote containers.
+    usage: /remotecontainers
+    aliases: [rc, remotecontainer, rcontainer]
+
+permissions:
+  remotecontainers.use:
+    description: Use basic RemoteContainers commands.
+    default: true
+  remotecontainers.create:
+    description: Create remote container links.
+    default: true
+  remotecontainers.open:
+    description: Open your own remote containers.
+    default: true
+  remotecontainers.delete:
+    description: Delete your own remote container links.
+    default: true
+  remotecontainers.rename:
+    description: Rename your own remote container links.
+    default: true
+  remotecontainers.list:
+    description: List your own remote containers.
+    default: true
+  remotecontainers.info:
+    description: View information about your own remote containers.
+    default: true
+  remotecontainers.others:
+    description: Open, list, inspect, or delete other players' links.
+    default: op
+  remotecontainers.reload:
+    description: Reload RemoteContainers.
+    default: op
+  remotecontainers.limit.bypass:
+    description: Bypass the configured per-player container limit.
+    default: op

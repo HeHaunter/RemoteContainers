@@ -1,0 +1,71 @@
+# RemoteContainers messages
+# Legacy & color codes are supported.
+
+prefix: "&8[&6RemoteContainers&8] "
+
+no-permission: "{prefix}&cYou do not have permission."
+player-only: "{prefix}&cThis command can only be used in-game."
+player-not-found: "{prefix}&cPlayer not found: &f{player}"
+reloaded: "{prefix}&aRemoteContainers reloaded."
+
+help:
+  - "&6RemoteContainers &7v1.0.0"
+  - "&e/rc create <name> &7- register the container you are looking at"
+  - "&e/rc open <name> &7- open one of your containers"
+  - "&e/rc delete <name> &7- delete one of your links"
+  - "&e/rc rename <old> <new> &7- rename a link"
+  - "&e/rc list &7- list your links"
+  - "&e/rc info <name> &7- show link information"
+  - "&8Admins: /rc open|delete|info <player> <name>, /rc list <player>, /rc reload"
+
+create:
+  usage: "{prefix}&cUsage: /rc create <name>"
+  invalid-name: "{prefix}&cInvalid name. Use {min}-{max} characters containing only letters, numbers, _ or -."
+  no-target: "{prefix}&cLook directly at a supported container first."
+  unsupported: "{prefix}&cThat block is not a supported container."
+  duplicate-name: "{prefix}&cYou already have a remote container named &f{name}&c."
+  already-linked: "{prefix}&cThat physical container is already registered."
+  limit-reached: "{prefix}&cYou reached your remote container limit of &f{limit}&c."
+  confirm: "{prefix}&eRight-click &f{name}&e's selected container within &f{seconds}s &eto confirm registration."
+  confirmation-expired: "{prefix}&cContainer registration expired. Run /rc create <name> again."
+  success: "{prefix}&aRegistered &f{name}&a at &f{world} {x}, {y}, {z}&a."
+
+open:
+  usage: "{prefix}&cUsage: /rc open <name>"
+  not-found: "{prefix}&cNo remote container named &f{name}&c was found."
+  world-unavailable: "{prefix}&cThe container's world is not currently available."
+  chunk-unloaded: "{prefix}&cThat container's chunk is unloaded."
+  chunk-load-failed: "{prefix}&cCould not load that container's chunk."
+  chunk-retain-failed: "{prefix}&cCould not keep that container's chunk loaded."
+  stale: "{prefix}&cThe registered container no longer exists. The stale link was removed."
+  cooldown: "{prefix}&cPlease wait &f{seconds}s &cbefore opening another remote container."
+
+delete:
+  usage: "{prefix}&cUsage: /rc delete <name>"
+  not-found: "{prefix}&cNo remote container named &f{name}&c was found."
+  success: "{prefix}&aDeleted remote link &f{name}&a."
+
+rename:
+  usage: "{prefix}&cUsage: /rc rename <old> <new>"
+  not-found: "{prefix}&cNo remote container named &f{name}&c was found."
+  duplicate-name: "{prefix}&cYou already have a remote container named &f{name}&c."
+  success: "{prefix}&aRenamed &f{old}&a to &f{new}&a."
+
+list:
+  empty: "{prefix}&7No remote containers found."
+  header: "{prefix}&6Remote containers for &f{player}&6: &f{count}"
+  entry: "&7- &e{name} &8(&7{material}, {world} {x}, {y}, {z}&8)"
+
+info:
+  not-found: "{prefix}&cNo remote container named &f{name}&c was found."
+  lines:
+    - "{prefix}&6Remote container: &f{name}"
+    - "&7Owner: &f{owner}"
+    - "&7Type: &f{material}"
+    - "&7World: &f{world}"
+    - "&7Location: &f{x}, {y}, {z}"
+    - "&7Registered: &f{created}"
+
+cleanup:
+  broken: "{prefix}&eRemote link &f{name} &ewas removed because its container was broken."
+  exploded: "{prefix}&eRemote link &f{name} &ewas removed because its container was destroyed."
